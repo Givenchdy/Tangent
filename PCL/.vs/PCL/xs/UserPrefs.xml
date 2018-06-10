@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PCL/Model/Employee.cs">
+    <Files>
+      <File FileName="PCL/MyClass.cs" Line="11" Column="1" />
+      <File FileName="Models Status" />
+      <File FileName="PCL Status" />
+      <File FileName="PCL/Model/User.cs" Line="4" Column="20" />
+      <File FileName="PCL/Model/Employee.cs" Line="11" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PCL FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+</Properties>

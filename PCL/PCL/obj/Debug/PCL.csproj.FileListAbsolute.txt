@@ -1,0 +1,15 @@
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/PCL.dll
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/PCL.pdb
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Binding.dll
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Core.dll
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Localization.dll
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Platform.dll
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/Newtonsoft.Json.dll
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Platform.pdb
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Core.pdb
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Binding.pdb
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/MvvmCross.Localization.pdb
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/bin/Debug/Newtonsoft.Json.xml
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/obj/Debug/PCL.csproj.CoreCompileInputs.cache
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/obj/Debug/PCL.dll
+/Users/givenmojapelo/Documents/GITHUB/Tangent/PCL/PCL/obj/Debug/PCL.pdb

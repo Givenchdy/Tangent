@@ -1,4 +1,5 @@
-﻿using CloudSdk.Model;
+﻿using CloudSdk.ApiInterface;
+using CloudSdk.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,17 @@ namespace CloudSdk.Models
 
             return instance;
         }
+
+        /*
+         * Fetch employee list from the api
+         */ 
+        public void FetchEmployeeListFromApi()
+        {
+            ApiAdapter apiAdapter = new ApiAdapter();
+            instance = apiAdapter.FetchEmployees();       
+        }
+
+        
 
 
     }

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/userDetailsTextID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:text="User Details"/>
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/firstNameContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/firstNameLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="First Name:"/>
+
+    <TextView
+        android:id="@+id/firstnameTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Given Mojapelo"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/lastNameContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/lastNameLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Last Name:"/>
+
+    <TextView
+        android:id="@+id/lastNameTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Given Mojapelo"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/PositionContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/PositionLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Position:"/>
+
+    <TextView
+        android:id="@+id/PositionTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Android Developer"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/LevelContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/LevelLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Level:"/>
+
+    <TextView
+        android:id="@+id/LevelTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Intermediate"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <TextView
+      android:id="@+id/contactDetailsTextID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      android:text="Contact Details"/>
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/PhoneContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/PhoneLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Phone No:"/>
+
+    <TextView
+        android:id="@+id/PhoneTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="0796800135"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/EmailContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/EmailLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Email Address:"/>
+
+    <TextView
+        android:id="@+id/EmailTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="mg.mojapelo@gmail.com"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+  android:id="@+id/BornDayContainerID"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/BornDayLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Birth Date:"/>
+
+    <TextView
+        android:id="@+id/BornDayTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="1993/10/02"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/genderContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/genderLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Gender:"/>
+
+    <TextView
+        android:id="@+id/genderTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Male"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/GithubUsernameContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/GithubUsernameLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Github:"/>
+
+    <TextView
+        android:id="@+id/GithubUsernameTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Givenchdy"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

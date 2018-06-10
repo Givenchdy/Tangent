@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using CloudSdk.ApiInterface;
 
 namespace CloudSdk.Model
 {
@@ -45,6 +46,25 @@ namespace CloudSdk.Model
         {
             get => _sort;
             set => _sort = value;
+        }
+
+        public static Employee FetchEmployeeData(int userID)
+        {
+            ApiAdapter apiAdapter = new ApiAdapter();
+            Employee employee = apiAdapter.FetchMyProfile(userID);
+
+            return employee;
+        }
+
+        public static bool AuthenticateUser(string email, string password)
+        {
+            ApiAdapter apiAdapter = new ApiAdapter();
+            string token = apiAdapter.AuthenticateUser(email, password);
+
+            if (token.Equals(ApiSettings.AUTH_TOKEN))
+                return true;
+            else
+                return false;        
         }
 
     }

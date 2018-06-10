@@ -20,15 +20,33 @@ namespace CloudSdk.ApiInterface
             request.AddParameter("Authorisation", ApiSettings.AUTH_TOKEN);
             IRestResponse response = client.Execute(request);
 
+            //process results logic here...       
+
             return null;
         }
 
-        public User FetchMyProfile(string userID)
+        public Employee FetchMyProfile(int userID)
         {
             var client = new RestClient(ApiSettings.BASE_URL);
             var request = new RestRequest(ApiSettings.GET_MY_PROFILE, Method.GET);
             request.AddParameter("Authorisation", ApiSettings.AUTH_TOKEN);
             IRestResponse response = client.Execute(request);
+
+            //process results logic here...
+
+
+            return null;
+        }
+
+        public string AuthenticateUser(string email, string password)
+        {
+
+            var client = new RestClient();
+            var request = new RestRequest(ApiSettings.AUTHENTICATE_USER_URL, Method.GET);
+            request.AddParameter("Authorisation", ApiSettings.AUTH_TOKEN);
+            IRestResponse response = client.Execute(request);
+
+            //process results logic here...
 
             return null;
         }

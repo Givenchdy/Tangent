@@ -8,26 +8,61 @@ namespace CloudSdk.Model
     {
 
         [JsonProperty(PropertyName = "id")]
-        private int _employeeId;
+        public int id;
 
         [JsonProperty(PropertyName = "name")]
         private string _positionName;
 
         [JsonProperty(PropertyName = "level")]
-        private string _employeeLevel;
+        public string level;
 
         [JsonProperty(PropertyName = "sort")]
         private int _sort;
 
+        [JsonProperty(PropertyName = "email")]
+        private string _emailAddress;
+
+        [JsonProperty(PropertyName = "phone")]
+        private string _phoneNumber;
+
+        [JsonProperty(PropertyName = "gituser")]
+        private string _gitusername;
+
+        [JsonProperty(PropertyName = "birthdate")]
+        private string _bornday;
 
         public Employee()
         {
         }
 
+        public string GitUsername
+        {
+            get => _gitusername;
+            set => _gitusername = value;
+        }
+
+        public string BornDate
+        {
+            get => _bornday;
+            set => _bornday = value;
+        }
+
+        public string EmailAddress
+        {
+            get => _emailAddress;
+            set => _emailAddress = value;
+        }
+
+        public string PhoneNumber
+        {
+            get => _phoneNumber;
+            set => _phoneNumber = value;
+        }
+
         public int EmployeeID
         {
-            get => _employeeId;
-            set => _employeeId = value;
+            get => id;
+            set => id = value;
         }
 
         public string PositionName
@@ -38,8 +73,8 @@ namespace CloudSdk.Model
 
         public string EmployeeLevel
         {
-            get => _employeeLevel;
-            set => _employeeLevel = value;
+            get => level;
+            set => level = value;
         }
 
         public int Sort
@@ -48,10 +83,10 @@ namespace CloudSdk.Model
             set => _sort = value;
         }
 
-        public static Employee FetchEmployeeData(int userID)
+        public static Employee FetchEmployeeData()
         {
             ApiAdapter apiAdapter = new ApiAdapter();
-            Employee employee = apiAdapter.FetchMyProfile(userID);
+            Employee employee = apiAdapter.FetchMyProfile();
 
             return employee;
         }

@@ -10,19 +10,18 @@ namespace CloudSdk.Model
 
 
         [JsonProperty(PropertyName = "username")]
-        private string _username;
+        public string _username;
 
 
         [JsonProperty(PropertyName = "email")]
-        private string _emailAddress;
+        public string _emailAddress;
 
 
-        [JsonProperty(PropertyName = "first_name")]
-        private string _firstName;
+        public string first_name;
 
 
         [JsonProperty(PropertyName = "last_name")]
-        private string _lastName;
+        private string last_name;
 
 
         [JsonProperty(PropertyName = "is_active")]
@@ -56,15 +55,15 @@ namespace CloudSdk.Model
 
         public string FirstName
         {
-            get => _firstName;
-            set => _firstName = value;
+            get => first_name;
+            set => first_name = value;
         }
 
 
         public string LastName
         {
-            get => _lastName;
-            set => _lastName = value;
+            get => last_name;
+            set => last_name = value;
         }
 
 

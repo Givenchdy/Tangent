@@ -1,5 +1,6 @@
 ﻿using CloudSdk.ApiInterface;
 using CloudSdk.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,29 +9,21 @@ using System.Threading.Tasks;
 
 namespace CloudSdk.Models
 {
-    class EmployeeCollection
+    public class EmployeeCollection
     {
+        [JsonProperty(PropertyName = "employees")]
+        public Dictionary<Int16, Employee> employeeList = new Dictionary<Int16, Employee>();
 
-        Dictionary<Int16, Employee> employeeList = new Dictionary<Int16, Employee>();
-        private static EmployeeCollection instance;
-
-        private EmployeeCollection() { }
-
-        public EmployeeCollection Instance()
-        {
-            if (instance == null)
-                instance = new EmployeeCollection();
-
-            return instance;
-        }
+        public EmployeeCollection() { }
 
         /*
          * Fetch employee list from the api
          */ 
-        public void FetchEmployeeListFromApi()
+        public static EmployeeCollection FetchEmployeeListFromApi()
         {
             ApiAdapter apiAdapter = new ApiAdapter();
-            instance = apiAdapter.FetchEmployees();       
+            EmployeeCollection employeeCollection = apiAdapter.FetchEmployees();
+            return employeeCollection;
         }
 
         

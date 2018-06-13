@@ -14,7 +14,6 @@ namespace CloudSdk.ApiInterface
         public const string GET_EMPLOYEES_URL = "employee/";
         public const string GET_MY_PROFILE = "employee/me/";
         public const string AUTHENTICATE_USER_URL = "http://staging.tangent.tngnt.co/api-token-auth/api-token-auth/";
-
-
+       
     }
 }

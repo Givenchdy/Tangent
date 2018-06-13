@@ -26,52 +26,10 @@ namespace FrontEnd
 		
 		public static void UpdateIdValues()
 		{
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::FrontEnd.Resource.Attribute.MvxBind;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::FrontEnd.Resource.Attribute.MvxDropDownItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::FrontEnd.Resource.Attribute.MvxGroupItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::FrontEnd.Resource.Attribute.MvxItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::FrontEnd.Resource.Attribute.MvxLang;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::FrontEnd.Resource.Attribute.MvxSource;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::FrontEnd.Resource.Attribute.MvxTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::FrontEnd.Resource.Id.MvvmCrossTagId;
-			global::MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::FrontEnd.Resource.Id.MvxBindingTagUnique;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::FrontEnd.Resource.Styleable.MvxBinding;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::FrontEnd.Resource.Styleable.MvxBinding_MvxBind;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::FrontEnd.Resource.Styleable.MvxBinding_MvxLang;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::FrontEnd.Resource.Styleable.MvxControl;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::FrontEnd.Resource.Styleable.MvxControl_MvxTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::FrontEnd.Resource.Styleable.MvxExpandableListView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::FrontEnd.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::FrontEnd.Resource.Styleable.MvxImageView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::FrontEnd.Resource.Styleable.MvxImageView_MvxSource;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::FrontEnd.Resource.Styleable.MvxListView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::FrontEnd.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::FrontEnd.Resource.Styleable.MvxListView_MvxItemTemplate;
 		}
 		
 		public partial class Attribute
 		{
-			
-			// aapt resource value: 0x7f010039
-			public const int MvxBind = 2130772025;
-			
-			// aapt resource value: 0x7f01003d
-			public const int MvxDropDownItemTemplate = 2130772029;
-			
-			// aapt resource value: 0x7f01003e
-			public const int MvxGroupItemTemplate = 2130772030;
-			
-			// aapt resource value: 0x7f01003c
-			public const int MvxItemTemplate = 2130772028;
-			
-			// aapt resource value: 0x7f01003a
-			public const int MvxLang = 2130772026;
-			
-			// aapt resource value: 0x7f01003f
-			public const int MvxSource = 2130772031;
-			
-			// aapt resource value: 0x7f01003b
-			public const int MvxTemplate = 2130772027;
 			
 			// aapt resource value: 0x7f010000
 			public const int barrierAllowsGoneWidgets = 2130771968;
@@ -261,7 +219,7 @@ namespace FrontEnd
 			public const int box_edittext = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int splash = 2130837505;
+			public const int curved_square = 2130837505;
 			
 			static Drawable()
 			{
@@ -276,212 +234,221 @@ namespace FrontEnd
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f04003c
-			public const int BornDayContainerID = 2130968636;
+			// aapt resource value: 0x7f05003f
+			public const int BornDayContainerID = 2131034175;
 			
-			// aapt resource value: 0x7f04003d
-			public const int BornDayLabelID = 2130968637;
+			// aapt resource value: 0x7f050040
+			public const int BornDayLabelID = 2131034176;
 			
-			// aapt resource value: 0x7f04003e
-			public const int BornDayTextID = 2130968638;
+			// aapt resource value: 0x7f050041
+			public const int BornDayTextID = 2131034177;
 			
-			// aapt resource value: 0x7f040039
-			public const int EmailContainerID = 2130968633;
+			// aapt resource value: 0x7f05003c
+			public const int EmailContainerID = 2131034172;
 			
-			// aapt resource value: 0x7f04003a
-			public const int EmailLabelID = 2130968634;
+			// aapt resource value: 0x7f05003d
+			public const int EmailLabelID = 2131034173;
 			
-			// aapt resource value: 0x7f04003b
-			public const int EmailTextID = 2130968635;
+			// aapt resource value: 0x7f05003e
+			public const int EmailTextID = 2131034174;
 			
-			// aapt resource value: 0x7f040042
-			public const int GithubUsernameContainerID = 2130968642;
+			// aapt resource value: 0x7f050045
+			public const int GithubUsernameContainerID = 2131034181;
 			
-			// aapt resource value: 0x7f040043
-			public const int GithubUsernameLabelID = 2130968643;
+			// aapt resource value: 0x7f050046
+			public const int GithubUsernameLabelID = 2131034182;
 			
-			// aapt resource value: 0x7f040044
-			public const int GithubUsernameTextID = 2130968644;
+			// aapt resource value: 0x7f050047
+			public const int GithubUsernameTextID = 2131034183;
 			
-			// aapt resource value: 0x7f040032
-			public const int LevelContainerID = 2130968626;
+			// aapt resource value: 0x7f050035
+			public const int LevelContainerID = 2131034165;
 			
-			// aapt resource value: 0x7f040033
-			public const int LevelLabelID = 2130968627;
+			// aapt resource value: 0x7f050036
+			public const int LevelLabelID = 2131034166;
 			
-			// aapt resource value: 0x7f040034
-			public const int LevelTextID = 2130968628;
+			// aapt resource value: 0x7f050037
+			public const int LevelTextID = 2131034167;
 			
-			// aapt resource value: 0x7f040000
-			public const int MvvmCrossTagId = 2130968576;
+			// aapt resource value: 0x7f050039
+			public const int PhoneContainerID = 2131034169;
 			
-			// aapt resource value: 0x7f040001
-			public const int MvxBindingTagUnique = 2130968577;
+			// aapt resource value: 0x7f05003a
+			public const int PhoneLabelID = 2131034170;
 			
-			// aapt resource value: 0x7f040036
-			public const int PhoneContainerID = 2130968630;
+			// aapt resource value: 0x7f05003b
+			public const int PhoneTextID = 2131034171;
 			
-			// aapt resource value: 0x7f040037
-			public const int PhoneLabelID = 2130968631;
+			// aapt resource value: 0x7f050032
+			public const int PositionContainerID = 2131034162;
 			
-			// aapt resource value: 0x7f040038
-			public const int PhoneTextID = 2130968632;
+			// aapt resource value: 0x7f050033
+			public const int PositionLabelID = 2131034163;
 			
-			// aapt resource value: 0x7f04002f
-			public const int PositionContainerID = 2130968623;
+			// aapt resource value: 0x7f050034
+			public const int PositionTextID = 2131034164;
 			
-			// aapt resource value: 0x7f040030
-			public const int PositionLabelID = 2130968624;
+			// aapt resource value: 0x7f05000e
+			public const int barrier = 2131034126;
 			
-			// aapt resource value: 0x7f040031
-			public const int PositionTextID = 2130968625;
+			// aapt resource value: 0x7f050000
+			public const int bottom = 2131034112;
 			
-			// aapt resource value: 0x7f040010
-			public const int barrier = 2130968592;
+			// aapt resource value: 0x7f05000f
+			public const int chains = 2131034127;
 			
-			// aapt resource value: 0x7f040002
-			public const int bottom = 2130968578;
+			// aapt resource value: 0x7f050038
+			public const int contactDetailsTextID = 2131034168;
 			
-			// aapt resource value: 0x7f040011
-			public const int chains = 2130968593;
+			// aapt resource value: 0x7f050010
+			public const int dimensions = 2131034128;
 			
-			// aapt resource value: 0x7f040035
-			public const int contactDetailsTextID = 2130968629;
+			// aapt resource value: 0x7f050011
+			public const int direct = 2131034129;
 			
-			// aapt resource value: 0x7f040012
-			public const int dimensions = 2130968594;
+			// aapt resource value: 0x7f050024
+			public const int employeeListID = 2131034148;
 			
-			// aapt resource value: 0x7f040013
-			public const int direct = 2130968595;
+			// aapt resource value: 0x7f050027
+			public const int employeeListItemExpertLevelID = 2131034151;
 			
-			// aapt resource value: 0x7f040003
-			public const int end = 2130968579;
+			// aapt resource value: 0x7f050025
+			public const int employeeListItemFullNameID = 2131034149;
 			
-			// aapt resource value: 0x7f040029
-			public const int firstNameContainerID = 2130968617;
+			// aapt resource value: 0x7f050026
+			public const int employeeListItemPositionID = 2131034150;
 			
-			// aapt resource value: 0x7f04002a
-			public const int firstNameLabelID = 2130968618;
+			// aapt resource value: 0x7f050001
+			public const int end = 2131034113;
 			
-			// aapt resource value: 0x7f04002b
-			public const int firstnameTextID = 2130968619;
+			// aapt resource value: 0x7f05002c
+			public const int firstNameContainerID = 2131034156;
 			
-			// aapt resource value: 0x7f04003f
-			public const int genderContainerID = 2130968639;
+			// aapt resource value: 0x7f05002d
+			public const int firstNameLabelID = 2131034157;
 			
-			// aapt resource value: 0x7f040040
-			public const int genderLabelID = 2130968640;
+			// aapt resource value: 0x7f05002e
+			public const int firstnameTextID = 2131034158;
 			
-			// aapt resource value: 0x7f040041
-			public const int genderTextID = 2130968641;
+			// aapt resource value: 0x7f050023
+			public const int fragmentContainerID = 2131034147;
 			
-			// aapt resource value: 0x7f040008
-			public const int gone = 2130968584;
+			// aapt resource value: 0x7f050042
+			public const int genderContainerID = 2131034178;
 			
-			// aapt resource value: 0x7f040009
-			public const int invisible = 2130968585;
+			// aapt resource value: 0x7f050043
+			public const int genderLabelID = 2131034179;
 			
-			// aapt resource value: 0x7f04002c
-			public const int lastNameContainerID = 2130968620;
+			// aapt resource value: 0x7f050044
+			public const int genderTextID = 2131034180;
 			
-			// aapt resource value: 0x7f04002d
-			public const int lastNameLabelID = 2130968621;
+			// aapt resource value: 0x7f050006
+			public const int gone = 2131034118;
 			
-			// aapt resource value: 0x7f04002e
-			public const int lastNameTextID = 2130968622;
+			// aapt resource value: 0x7f050007
+			public const int invisible = 2131034119;
 			
-			// aapt resource value: 0x7f040004
-			public const int left = 2130968580;
+			// aapt resource value: 0x7f05002f
+			public const int lastNameContainerID = 2131034159;
 			
-			// aapt resource value: 0x7f040027
-			public const int loginBtnID = 2130968615;
+			// aapt resource value: 0x7f050030
+			public const int lastNameLabelID = 2131034160;
 			
-			// aapt resource value: 0x7f040025
-			public const int loginNameTxtID = 2130968613;
+			// aapt resource value: 0x7f050031
+			public const int lastNameTextID = 2131034161;
 			
-			// aapt resource value: 0x7f040014
-			public const int none = 2130968596;
+			// aapt resource value: 0x7f050002
+			public const int left = 2131034114;
 			
-			// aapt resource value: 0x7f04000e
-			public const int packed = 2130968590;
+			// aapt resource value: 0x7f05002a
+			public const int loginBtnID = 2131034154;
 			
-			// aapt resource value: 0x7f04000a
-			public const int parent = 2130968586;
+			// aapt resource value: 0x7f050028
+			public const int loginNameTxtID = 2131034152;
 			
-			// aapt resource value: 0x7f040026
-			public const int passwordTxtID = 2130968614;
+			// aapt resource value: 0x7f050012
+			public const int none = 2131034130;
 			
-			// aapt resource value: 0x7f04000b
-			public const int percent = 2130968587;
+			// aapt resource value: 0x7f05000c
+			public const int packed = 2131034124;
 			
-			// aapt resource value: 0x7f040005
-			public const int right = 2130968581;
+			// aapt resource value: 0x7f050008
+			public const int parent = 2131034120;
 			
-			// aapt resource value: 0x7f04000c
-			public const int spread = 2130968588;
+			// aapt resource value: 0x7f050029
+			public const int passwordTxtID = 2131034153;
 			
-			// aapt resource value: 0x7f04000f
-			public const int spread_inside = 2130968591;
+			// aapt resource value: 0x7f050009
+			public const int percent = 2131034121;
 			
-			// aapt resource value: 0x7f040015
-			public const int standard = 2130968597;
+			// aapt resource value: 0x7f050003
+			public const int right = 2131034115;
 			
-			// aapt resource value: 0x7f040006
-			public const int start = 2130968582;
+			// aapt resource value: 0x7f05000a
+			public const int spread = 2131034122;
 			
-			// aapt resource value: 0x7f040007
-			public const int top = 2130968583;
+			// aapt resource value: 0x7f05000d
+			public const int spread_inside = 2131034125;
 			
-			// aapt resource value: 0x7f04001f
-			public const int totalBorndaysContainerID = 2130968607;
+			// aapt resource value: 0x7f050013
+			public const int standard = 2131034131;
 			
-			// aapt resource value: 0x7f04001b
-			public const int totalDeveloperCountID = 2130968603;
+			// aapt resource value: 0x7f050004
+			public const int start = 2131034116;
 			
-			// aapt resource value: 0x7f04001a
-			public const int totalDeveloperLabelID = 2130968602;
+			// aapt resource value: 0x7f050005
+			public const int top = 2131034117;
 			
-			// aapt resource value: 0x7f040019
-			public const int totalDevelopersContainerID = 2130968601;
+			// aapt resource value: 0x7f05001d
+			public const int totalBorndaysContainerID = 2131034141;
 			
-			// aapt resource value: 0x7f040016
-			public const int totalEmployeesContainerID = 2130968598;
+			// aapt resource value: 0x7f050019
+			public const int totalDeveloperCountID = 2131034137;
 			
-			// aapt resource value: 0x7f040018
-			public const int totalEmployeesCountID = 2130968600;
+			// aapt resource value: 0x7f050018
+			public const int totalDeveloperLabelID = 2131034136;
 			
-			// aapt resource value: 0x7f040017
-			public const int totalEmployeesLabelID = 2130968599;
+			// aapt resource value: 0x7f050017
+			public const int totalDevelopersContainerID = 2131034135;
 			
-			// aapt resource value: 0x7f040021
-			public const int totalMonthlyBorndaysTeamCountID = 2130968609;
+			// aapt resource value: 0x7f050014
+			public const int totalEmployeesContainerID = 2131034132;
 			
-			// aapt resource value: 0x7f040020
-			public const int totalMonthlyBorndaysTeamLabelID = 2130968608;
+			// aapt resource value: 0x7f050016
+			public const int totalEmployeesCountID = 2131034134;
 			
-			// aapt resource value: 0x7f040022
-			public const int totalReviewsContainerID = 2130968610;
+			// aapt resource value: 0x7f050015
+			public const int totalEmployeesLabelID = 2131034133;
 			
-			// aapt resource value: 0x7f040024
-			public const int totalReviewsTeamCountID = 2130968612;
+			// aapt resource value: 0x7f05001f
+			public const int totalMonthlyBorndaysTeamCountID = 2131034143;
 			
-			// aapt resource value: 0x7f040023
-			public const int totalReviewsTeamLabelID = 2130968611;
+			// aapt resource value: 0x7f05001e
+			public const int totalMonthlyBorndaysTeamLabelID = 2131034142;
 			
-			// aapt resource value: 0x7f04001c
-			public const int totalSalesContainerID = 2130968604;
+			// aapt resource value: 0x7f050020
+			public const int totalReviewsContainerID = 2131034144;
 			
-			// aapt resource value: 0x7f04001e
-			public const int totalSalesTeamCountID = 2130968606;
+			// aapt resource value: 0x7f050022
+			public const int totalReviewsTeamCountID = 2131034146;
 			
-			// aapt resource value: 0x7f04001d
-			public const int totalSalesTeamLabelID = 2130968605;
+			// aapt resource value: 0x7f050021
+			public const int totalReviewsTeamLabelID = 2131034145;
 			
-			// aapt resource value: 0x7f040028
-			public const int userDetailsTextID = 2130968616;
+			// aapt resource value: 0x7f05001a
+			public const int totalSalesContainerID = 2131034138;
 			
-			// aapt resource value: 0x7f04000d
-			public const int wrap = 2130968589;
+			// aapt resource value: 0x7f05001c
+			public const int totalSalesTeamCountID = 2131034140;
+			
+			// aapt resource value: 0x7f05001b
+			public const int totalSalesTeamLabelID = 2131034139;
+			
+			// aapt resource value: 0x7f05002b
+			public const int userDetailsTextID = 2131034155;
+			
+			// aapt resource value: 0x7f05000b
+			public const int wrap = 2131034123;
 			
 			static Id()
 			{
@@ -497,19 +464,22 @@ namespace FrontEnd
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int dashboard_view = 2130903040;
+			public const int dashboard_fragment_view = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int employee_collection_view = 2130903041;
+			public const int dashboard_view = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int login_view = 2130903042;
+			public const int employee_collection_fragment_view = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int MainView = 2130903043;
+			public const int employee_list_item_view = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int user_profile_view = 2130903044;
+			public const int login_view = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int user_profile_view = 2130903045;
 			
 			static Layout()
 			{
@@ -524,8 +494,8 @@ namespace FrontEnd
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int app_name = 2131099648;
+			// aapt resource value: 0x7f040000
+			public const int app_name = 2130968576;
 			
 			static String()
 			{
@@ -533,22 +503,6 @@ namespace FrontEnd
 			}
 			
 			private String()
-			{
-			}
-		}
-		
-		public partial class Style
-		{
-			
-			// aapt resource value: 0x7f050000
-			public const int Theme_Splash = 2131034112;
-			
-			static Style()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Style()
 			{
 			}
 		}
@@ -1103,44 +1057,6 @@ namespace FrontEnd
 			
 			// aapt resource value: 0
 			public const int LinearConstraintLayout_android_orientation = 0;
-			
-			public static int[] MvxBinding = new int[] {
-					2130772025,
-					2130772026};
-			
-			// aapt resource value: 0
-			public const int MvxBinding_MvxBind = 0;
-			
-			// aapt resource value: 1
-			public const int MvxBinding_MvxLang = 1;
-			
-			public static int[] MvxControl = new int[] {
-					2130772027};
-			
-			// aapt resource value: 0
-			public const int MvxControl_MvxTemplate = 0;
-			
-			public static int[] MvxExpandableListView = new int[] {
-					2130772030};
-			
-			// aapt resource value: 0
-			public const int MvxExpandableListView_MvxGroupItemTemplate = 0;
-			
-			public static int[] MvxImageView = new int[] {
-					2130772031};
-			
-			// aapt resource value: 0
-			public const int MvxImageView_MvxSource = 0;
-			
-			public static int[] MvxListView = new int[] {
-					2130772028,
-					2130772029};
-			
-			// aapt resource value: 1
-			public const int MvxListView_MvxDropDownItemTemplate = 1;
-			
-			// aapt resource value: 0
-			public const int MvxListView_MvxItemTemplate = 0;
 			
 			static Styleable()
 			{

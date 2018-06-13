@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/totalEmployeesContainerID"
+    android:layout_width="match_parent"
+    android:background="@drawable/box_edittext"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/totalEmployeesLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#000000"
+        android:text="Total Employees:"/>
+
+
+    <TextView
+        android:id="@+id/totalEmployeesCountID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+         android:textColor="#000000"
+        android:text="75"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/totalDevelopersContainerID"
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:layout_marginTop="40dp"
+      android:background="@drawable/box_edittext"
+      app:layout_constraintTop_toBottomOf="@+id/totalEmployeesContainerID"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/totalDeveloperLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+         android:textColor="#000000"
+        android:padding="10dp"
+        android:text="Developers:"/>
+
+
+    <TextView
+        android:id="@+id/totalDeveloperCountID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+         android:textColor="#000000"
+        android:text="51"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/totalSalesContainerID"
+      android:layout_width="match_parent"
+      android:layout_marginTop="40dp"
+      android:background="@drawable/box_edittext"
+      android:orientation="horizontal"
+      app:layout_constraintTop_toBottomOf="@+id/totalDevelopersContainerID"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/totalSalesTeamLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+         android:textColor="#000000"
+        android:text="Sales Team:"/>
+
+
+    <TextView
+        android:id="@+id/totalSalesTeamCountID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_gravity="right"
+         android:textColor="#000000"
+        android:text="7"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/totalBorndaysContainerID"
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:layout_marginTop="40dp"
+      android:background="@drawable/box_edittext"
+      app:layout_constraintTop_toBottomOf="@+id/totalSalesContainerID"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/totalMonthlyBorndaysTeamLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp"
+         android:textColor="#000000"
+        android:text="Monthly Birthdays:"/>
+
+    <TextView
+        android:id="@+id/totalMonthlyBorndaysTeamCountID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="10dp"
+         android:textColor="#000000"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="4"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/totalReviewsContainerID"
+      android:layout_width="match_parent"
+      android:layout_marginTop="40dp"
+      android:orientation="horizontal"
+      android:background="@drawable/box_edittext"
+       android:textColor="#000000"
+      app:layout_constraintTop_toBottomOf="@+id/totalBorndaysContainerID"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/totalReviewsTeamLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp"
+         android:textColor="#000000"
+        android:text="Employee Reviews:"/>
+
+
+    <TextView
+        android:id="@+id/totalReviewsTeamCountID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="23"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

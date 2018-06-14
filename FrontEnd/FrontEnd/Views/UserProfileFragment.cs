@@ -19,13 +19,15 @@ namespace FrontEnd.Views
     {
 
         public EmployeeViewModel selectedEmployee;
+        public static string TAG = "UserProfileFragment";
 
         [BindView(Resource.Id.firstnameTextID)] TextView firstNameText;
         [BindView(Resource.Id.lastNameTextID)]  TextView lastNameText;
         [BindView(Resource.Id.PositionTextID)]  TextView positionNameText;
         [BindView(Resource.Id.LevelTextID)]     TextView LevelNameText;
         [BindView(Resource.Id.BornDayTextID)]   TextView bornDayText;
-        [BindView(Resource.Id.genderTextID)]    TextView genderText;
+        [BindView(Resource.Id.GenderTextID)]    TextView genderText;
+        [BindView(Resource.Id.RaceTextID)]      TextView raceText;
 
 
         //Contact details
@@ -33,11 +35,11 @@ namespace FrontEnd.Views
         [BindView(Resource.Id.EmailTextID)] TextView emailText;
         [BindView(Resource.Id.GithubUsernameTextID)] TextView gitusernameText;
 
-
-
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            DashBoardView.CurrentFragmentTag = TAG;
+            DashBoardView.exitCounter = 0;
 
             // Create your fragment here
         }
@@ -64,7 +66,8 @@ namespace FrontEnd.Views
                 positionNameText.Text = selectedEmployee.PositionName;
                 LevelNameText.Text = selectedEmployee.EmployeeLevel;
                 bornDayText.Text = selectedEmployee.BirthDate;
-                genderText.Text = selectedEmployee.GenderName;
+                genderText.Text = selectedEmployee.GetGender;
+                raceText.Text = selectedEmployee.GetRace;
 
                 //Contact details
                 phoneText.Text = selectedEmployee.PhoneNumber;

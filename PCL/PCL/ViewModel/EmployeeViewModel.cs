@@ -29,6 +29,8 @@ namespace PCL.ViewModel
 
         public string Race { get; set; }
 
+        public NextOfKinViewModel nextOfKin { get; set; }
+
         public string GetGender
         {
             get

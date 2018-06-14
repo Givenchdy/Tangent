@@ -1,4 +1,5 @@
-﻿using PCL.ViewInterfaces;
+﻿using CloudSdk.Model;
+using PCL.ViewInterfaces;
 
 namespace PCL.Presenters
 {
@@ -6,10 +7,15 @@ namespace PCL.Presenters
     {
         ILoginView IloginView;
 
-        public void Initialize(ILoginView IloginView)
+        public void Initialize(ILoginView IloginView, string tokenKey)
         {
             this.IloginView = IloginView;
-            CheckUserAuthentication(true);
+
+            if(tokenKey != null)
+               CheckUserAuthentication(true);
+            else
+                CheckUserAuthentication(false);
+
         }
 
         public void CheckUserAuthentication(bool loginStatus)
@@ -21,18 +27,18 @@ namespace PCL.Presenters
 
         }
 
-        public bool AuthenticateUser(string username, string password)
+        public string AuthenticateUser(string username, string password)
         {
 
-           // Employee employee = new Employee();
-           // bool result = Employee.AuthenticateUser(username, password);
+            Employee employee = new Employee();
+            string result = Employee.AuthenticateUser(username, password);
 
-           // if(result)          
-            //    employee = Employee.FetchEmployeeData();
+            if(result != null)          
+                employee = Employee.FetchEmployeeData();
             
-           // CheckUserAuthentication(result);
+            CheckUserAuthentication(true);
 
-            return true;
+            return result;
         }
 
     }

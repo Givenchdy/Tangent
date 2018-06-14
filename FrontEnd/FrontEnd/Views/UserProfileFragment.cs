@@ -74,7 +74,6 @@ namespace FrontEnd.Views
                 emailText.Text = selectedEmployee.EmailAddress;
                 gitusernameText.Text = selectedEmployee.GitUsername;
             }
-
     }
     }
 }

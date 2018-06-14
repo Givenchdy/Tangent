@@ -21,14 +21,14 @@ namespace FrontEnd.Views
 
         public static string TAG = "DashboardSummaryFragment";
         [BindView(Resource.Id.totalEmployeesCountID)] TextView totalEmployeeCountText;
-        [BindView(Resource.Id.totalReviewsTeamCountID)] TextView totalEmployeeReviewCountText;
+       // [BindView(Resource.Id.totalReviewsTeamCountID)] TextView totalEmployeeReviewCountText;
         [BindView(Resource.Id.totalMonthlyBorndaysTeamCountID)] TextView totalMonthlyBornDaysCountText;
 
         [BindView(Resource.Id.totalEmployeesContainerID)] ConstraintLayout totalEmployeeButton;
         [BindView(Resource.Id.totalRaceContainerID)] ConstraintLayout totalRaceButton;
         [BindView(Resource.Id.totalGenderContainerID)] ConstraintLayout totalGendersButton;
 
-        [BindView(Resource.Id.totalReviewsContainerID)] ConstraintLayout totalEmployeeReviewButton;
+        [BindView(Resource.Id.MyProfileContainerID)] ConstraintLayout myProfileButton;
         [BindView(Resource.Id.totalBorndaysContainerID)] ConstraintLayout totalMonthlyBornDaysButton;
 
 
@@ -56,8 +56,18 @@ namespace FrontEnd.Views
             totalEmployeeButton.Click += OnTotalEmployeeClick;
             totalRaceButton.Click += OnRaceFilterClick;
             totalGendersButton.Click += OnGenderFilterClick;
-            totalEmployeeReviewButton.Click += OnEmployeeReviewsClick;
+            myProfileButton.Click += OnMyProfileClick;
             totalMonthlyBornDaysButton.Click += OnTotalMonthlyBirthdaysClick;
+        }
+
+
+        protected void OnMyProfileClick(object sender, EventArgs e)
+        {
+            //ShowEmployeeCollectionView(FilterLookup.EmployeeReviews);
+            DetailedUserProfileFragment userViewFragment = new DetailedUserProfileFragment();
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            transaction.Replace(Resource.Id.fragmentContainerID, userViewFragment);
+            transaction.Commit();
         }
 
         protected void OnTotalEmployeeClick(object sender, EventArgs e)
@@ -91,10 +101,6 @@ namespace FrontEnd.Views
             ShowEmployeeCollectionView(FilterLookup.MonthlyBirthDays);
         }
 
-        protected void OnEmployeeReviewsClick(object sender, EventArgs e)
-        {
-            ShowEmployeeCollectionView(FilterLookup.EmployeeReviews);
-        }
 
         public void ShowEmployeeCollectionView(FilterLookup filter)
         {

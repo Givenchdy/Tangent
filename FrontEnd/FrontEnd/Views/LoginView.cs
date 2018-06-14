@@ -12,6 +12,7 @@ using Android.Widget;
 using CheeseBind;
 using PCL.Presenters;
 using PCL.ViewInterfaces;
+using FrontEnd.Settings;
 
 namespace FrontEnd.Views
 {
@@ -31,8 +32,10 @@ namespace FrontEnd.Views
             SetContentView(Resource.Layout.login_view);
             Cheeseknife.Bind(this);
 
+            string token = SettingsData.GetAndroidStringFromPreferences(SettingsData.APP_TOKEN);
+       
             loginPresenter = new LoginPresenter();
-            loginPresenter.Initialize(this);
+            loginPresenter.Initialize(this, token);
 
             loginButton.Click += OnLoginClick;
 
@@ -48,7 +51,8 @@ namespace FrontEnd.Views
             
             string username = loginUserNameBox.Text;
             string password = loginPasswordBox.Text;
-            bool loginResults = loginPresenter.AuthenticateUser(username, password);
+            string token = loginPresenter.AuthenticateUser(username, password);
+            SettingsData.SetPreferenceKey(SettingsData.APP_TOKEN, token);
             StartDashBoardView();
 
             return true;

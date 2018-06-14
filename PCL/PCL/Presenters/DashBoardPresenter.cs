@@ -16,33 +16,34 @@ namespace PCL.Presenters
 
         public void InitializeCollection()
         {
-            EmployeeCollectionViewModel.Instance.FetchEmployeesFromCloudSdk();
+            EmployeeCollectionViewModel.Instance.FetchFilteredEmployeeListFromCloudSdk(null);
             FilteredemployeeList = EmployeeCollectionViewModel.Instance.employeeList;
         }
 
-        public LinkedList<EmployeeViewModel> GetFilteredEmployeeCollection(FilterLookup filter)
+        public void GetFilteredEmployeeCollection(FilterLookup filter, string filterValue)
         {
 
-            if (EmployeeCollectionViewModel.Instance.employeeList.Count == 0)
-            {
-                EmployeeCollectionViewModel.Instance.FetchFilteredEmployeeListFromCloudSdk(filter);
-                GetFilteredEmployeeCollection(filter);
-            }
-            else
-            {
+            string queryString = formFilterQueryString(filter, filterValue);
+            EmployeeCollectionViewModel.Instance.FetchFilteredEmployeeListFromCloudSdk(queryString);
+            FilteredemployeeList = EmployeeCollectionViewModel.Instance.employeeList;
 
-                FilteredemployeeList.Clear();
-                foreach (EmployeeViewModel item in EmployeeCollectionViewModel.Instance.employeeList)
-                {
-                    if (item.EmployeeType == filter)
-                    {
-                        FilteredemployeeList.AddLast(item);
-                    }
-                }
-            }
-
-            return null;
         }
+
+        private string formFilterQueryString(FilterLookup filter, string filterValue)
+        {
+
+            switch(filter)
+            {
+                case FilterLookup.Gender:
+                        return "gender=" + filterValue;
+                case FilterLookup.Race:
+                    return "race=" + filterValue;
+                default:
+                    return null;
+            }
+
+        }
+
 
         private void PopulateEmployeeCollectionWithTestData()
         {

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+
+  <RadioGroup
+    android:id="@+id/raceFilterRadioGroupID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  
+       <RadioButton
+          android:id="@+id/blackRadioID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Black"/>
+
+      <RadioButton
+          android:id="@+id/whiteRadioID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="White"/>
+    
+      
+       <RadioButton
+          android:id="@+id/indianRadioID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Indian"/>
+
+      <RadioButton
+          android:id="@+id/colouredRadioID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Coloured"/>
+  
+  </RadioGroup>
+  
+
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+      android:id="@+id/okBtnID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Okay"/>
+
+    <Button
+      android:id="@+id/cancelBtnID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:text="Cancel"/>
+    
+    
+  </LinearLayout>
+
+</LinearLayout>

@@ -62,6 +62,50 @@
 
 
   <android.support.constraint.ConstraintLayout
+    android:id="@+id/RaceContainerID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/RaceLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Race:"/>
+
+    <TextView
+        android:id="@+id/RaceTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Indian"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
+  android:id="@+id/GenderContainerID"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/GenderLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Race:"/>
+
+    <TextView
+        android:id="@+id/GenderTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Female"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+
+  <android.support.constraint.ConstraintLayout
       android:id="@+id/PositionContainerID"
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
@@ -179,26 +223,6 @@
   </android.support.constraint.ConstraintLayout>
 
 
-  <android.support.constraint.ConstraintLayout
-      android:id="@+id/genderContainerID"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
-
-    <TextView
-        android:id="@+id/genderLabelID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="Gender:"/>
-
-    <TextView
-        android:id="@+id/genderTextID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="Male"/>
-
-  </android.support.constraint.ConstraintLayout>
 
 
   <android.support.constraint.ConstraintLayout

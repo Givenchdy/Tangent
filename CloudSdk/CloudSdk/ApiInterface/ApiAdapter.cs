@@ -2,6 +2,7 @@
 using CloudSdk.Model;
 using CloudSdk.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,12 +16,18 @@ namespace CloudSdk.ApiInterface
     class ApiAdapter
     {
 
-        public EmployeeCollection FetchEmployees()
+        public EmployeeCollection FetchEmployees(string filter)
         {
 
             //provide url and package authorisation token
             WebClient client = new WebClient();
-            String uri = ApiSettings.BASE_URL + ApiSettings.GET_EMPLOYEES_URL;
+            String uri = null;
+
+            if (filter == null)
+              uri = ApiSettings.BASE_URL + ApiSettings.GET_EMPLOYEES_URL;
+            else
+                uri = ApiSettings.BASE_URL + ApiSettings.GET_EMPLOYEES_URL + "?" + filter;
+
             client.Headers.Add("Authorization", ApiSettings.AUTH_TOKEN);
             client.Headers.Add("Content-Type", "Application/Json");
 
@@ -29,31 +36,19 @@ namespace CloudSdk.ApiInterface
             StreamReader sr = new StreamReader(myStream);
             var content = sr.ReadToEnd();
 
-            //System.Console.Out.WriteLine(content);
-           // content.ToString();
+            System.Console.Out.WriteLine(content);
 
             //Process response
             EmployeeCollection employeeCollection = new EmployeeCollection();
-            // JsonConvert.PopulateObject(content, employeeCollection);
+            List<Object> jsonArrayString = JsonConvert.DeserializeObject<List<Object>>(content);
 
-            List<Employee> items = JsonConvert.DeserializeObject<List<Employee>>(content);
-            //System.Console.Out.WriteLine("johhhh" + items.ElementAt(0).first_name);
+            for(int i= 0; i < jsonArrayString.Count; i++)
+            {
+                String jsonString = jsonArrayString.ElementAt(i).ToString();
+                Employee em1 = JsonConvert.DeserializeObject<Employee>(jsonString);
 
-            //int count = 1;
-            //foreach(Employee item in items)
-            //{
-            //    try
-            //    {
-            //        employeeCollection.employeeList.Add((Int16)count, item);
-            //        System.Console.Out.WriteLine("Item Key: " + count + "--" + item.FirstName + "--" + item.EmployeeLevel);
-            //        count++;
-
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        System.Console.Out.WriteLine(ex.Message);
-            //    }
-            //}
+                employeeCollection.employeeList.Add(i, em1);
+            }
 
             myStream.Close();
 
@@ -90,14 +85,28 @@ namespace CloudSdk.ApiInterface
         public string AuthenticateUser(string email, string password)
         {
 
-            //var client = new RestClient();
-            //var request = new RestRequest(ApiSettings.AUTHENTICATE_USER_URL, Method.GET);
-            //request.AddParameter("Authorisation", ApiSettings.AUTH_TOKEN);
-            //IRestResponse response = client.Execute(request);
+            //provide url and package authorisation token
+            WebClient client = new WebClient();
+            String uri = ApiSettings.AUTHENTICATE_USER_URL;
+            client.Headers.Add("password", password);
+            client.Headers.Add("username", email);
+            
+            System.Collections.Specialized.NameValueCollection formData = new System.Collections.Specialized.NameValueCollection();
+            formData["username"] = email;
+            formData["password"] = password;
 
-            //process results logic here...
+            client.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
 
-            return null;
+            //UploadData implicitly sets HTTP POST as the request method.
+            byte[] responseArray = client.UploadValues(uri, formData);
+
+            //Get response in json form to work with
+            JObject jsonObject = JObject.Parse(Encoding.ASCII.GetString(responseArray));
+
+            //Process response
+            JToken token = jsonObject["token"];
+
+            return token.ToString();
         }
 
         public string CreateFilter(Dictionary<string, EmployeeFilter> filters)
@@ -107,10 +116,7 @@ namespace CloudSdk.ApiInterface
             {
                 ReturnFilterString(filter.Value, filter.Key);
             }
-            /// api / employee /? race = C & position = 2 & 
-            //start_date_range = 4 & user = 12 & gender = M & 
-            //birth_date_range = 4 & email__contains = prav
-
+  
             return null;
         }
 

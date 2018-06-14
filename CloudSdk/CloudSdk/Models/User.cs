@@ -3,25 +3,22 @@ using Newtonsoft.Json;
 
 namespace CloudSdk.Model
 {
+    [Newtonsoft.Json.JsonObject(Title = "user")]
     public class User
     {
         [JsonProperty(PropertyName = "id")]
-        private int _userId;
+        public int id;
 
 
         [JsonProperty(PropertyName = "username")]
         public string _username;
 
 
-        [JsonProperty(PropertyName = "email")]
-        public string _emailAddress;
-
-
         public string first_name;
 
 
         [JsonProperty(PropertyName = "last_name")]
-        private string last_name;
+        private string lastName;
 
 
         [JsonProperty(PropertyName = "is_active")]
@@ -46,13 +43,6 @@ namespace CloudSdk.Model
         }
 
 
-        public string EmailAddress
-        {
-            get => _emailAddress;
-            set => _emailAddress = value;
-        }
-
-
         public string FirstName
         {
             get => first_name;
@@ -62,8 +52,8 @@ namespace CloudSdk.Model
 
         public string LastName
         {
-            get => last_name;
-            set => last_name = value;
+            get => lastName;
+            set => lastName = value;
         }
 
 

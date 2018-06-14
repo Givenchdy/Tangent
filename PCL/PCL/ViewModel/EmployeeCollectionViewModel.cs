@@ -24,42 +24,29 @@ namespace PCL.ViewModel
             }
         }
 
-        public void FetchFilteredEmployeeListFromCloudSdk(FilterLookup filter)
+        public void FetchFilteredEmployeeListFromCloudSdk(string filter)
         {
-            EmployeeCollection employeeCollection = EmployeeCollection.FetchEmployeeListFromApi();
-
-            foreach (KeyValuePair<Int16, Employee> item in employeeCollection.employeeList.ToList())
+            EmployeeCollection employeeCollection = EmployeeCollection.FetchEmployeeListFromApi(filter);
+            employeeList.Clear();
+            foreach (KeyValuePair<int, Employee> item in employeeCollection.employeeList.ToList())
             {
                 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
-                employeeViewModel.EmployeeID = item.Value.EmployeeID;
-                employeeViewModel.EmployeeLevel = item.Value.EmployeeLevel;
-                employeeViewModel.FirstName = item.Value.FirstName;
-                employeeViewModel.LastName = item.Value.LastName;
-                employeeViewModel.PositionName = item.Value.PositionName;
-            }
-
-        }
-
-        public void FetchEmployeesFromCloudSdk()
-        {
-            EmployeeCollection employeeCollection = EmployeeCollection.FetchEmployeeListFromApi();
-
-            foreach (KeyValuePair<Int16, Employee> item in employeeCollection.employeeList.ToList())
-            {
-                EmployeeViewModel employeeViewModel = new EmployeeViewModel();
-                employeeViewModel.EmployeeID = item.Value.EmployeeID;
-                employeeViewModel.EmployeeLevel = item.Value.EmployeeLevel;
-                employeeViewModel.FirstName = item.Value.FirstName;
-                employeeViewModel.LastName = item.Value.LastName;
-                employeeViewModel.PositionName = item.Value.PositionName;
+                employeeViewModel.EmployeeID = item.Value.user.id;
+                employeeViewModel.EmployeeLevel = item.Value.position.level;
+                employeeViewModel.FirstName = item.Value.user.FirstName;
+                employeeViewModel.LastName = item.Value.user.LastName;
+                employeeViewModel.PositionName = item.Value.position.name;
                 employeeViewModel.EmailAddress = item.Value.EmailAddress;
                 employeeViewModel.PhoneNumber = item.Value.PhoneNumber;
                 employeeViewModel.GitUsername = item.Value.GitUsername;
                 employeeViewModel.BirthDate = item.Value.BornDate;
-
+                employeeViewModel.GenderName = item.Value.Gender;
+                employeeViewModel.Race = item.Value.Race;
+                employeeList.AddLast(employeeViewModel);
             }
 
         }
+
 
 
     }

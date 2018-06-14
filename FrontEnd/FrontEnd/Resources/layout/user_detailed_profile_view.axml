@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+  <LinearLayout
+
+      android:orientation="vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <TextView
+      android:id="@+id/userDetailsTextID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      android:text="User Details"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/firstNameContainerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/firstNameLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="First Name:"/>
+
+      <TextView
+          android:id="@+id/firstnameTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Given Mojapelo"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lastNameContainerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/lastNameLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Last Name:"/>
+
+      <TextView
+          android:id="@+id/lastNameTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Given Mojapelo"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+      android:id="@+id/RaceContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/RaceLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Race:"/>
+
+      <TextView
+          android:id="@+id/RaceTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Indian"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+    android:id="@+id/GenderContainerID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/GenderLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Race:"/>
+
+      <TextView
+          android:id="@+id/GenderTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Female"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/PositionContainerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/PositionLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Position:"/>
+
+      <TextView
+          android:id="@+id/PositionTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Android Developer"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/LevelContainerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/LevelLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Level:"/>
+
+      <TextView
+          android:id="@+id/LevelTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Intermediate"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/contactDetailsTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:text="Contact Details"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/PhoneContainerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/PhoneLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Phone No:"/>
+
+      <TextView
+          android:id="@+id/PhoneTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="0796800135"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/EmailContainerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/EmailLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Email Address:"/>
+
+      <TextView
+          android:id="@+id/EmailTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="mg.mojapelo@gmail.com"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+    android:id="@+id/BornDayContainerID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/BornDayLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Birth Date:"/>
+
+      <TextView
+          android:id="@+id/BornDayTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="1993/10/02"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/GithubUsernameContainerID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/GithubUsernameLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Github:"/>
+
+      <TextView
+          android:id="@+id/GithubUsernameTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Givenchdy"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+      android:id="@+id/KinDetailsTextID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      android:text="Next of Kin"/>
+
+    <android.support.constraint.ConstraintLayout
+      android:id="@+id/GithubUsernameContainerID"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/nextOfKinNameLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Name:"/>
+
+      <TextView
+          android:id="@+id/nextOfKinNameTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Clifford Malapane"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+    android:id="@+id/nextOfKinRelationshipContainerID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/nextOfKinNameLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Relationship:"/>
+
+      <TextView
+          android:id="@+id/nextOfKinRelationTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Friend"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+  android:id="@+id/nextOfKinEmailContainerID"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/nextOfKinEmailLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Email Address:"/>
+
+      <TextView
+          android:id="@+id/nextOfKinEmailTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="mp@gmail.com"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+  android:id="@+id/nextOfKinPhoneContainerID"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/nextOfKinPhoneLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Phone Number:"/>
+
+      <TextView
+          android:id="@+id/nextOfKinPhoneTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="0826373622"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+  android:id="@+id/nextOfKinAddressContainerID"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/nextOfKinAddressLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Physical Address:"/>
+
+      <TextView
+          android:id="@+id/nextOfKinAddressTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Bellflower st, Fleurhof"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+    android:id="@+id/reviewDetailsTextID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:text="Review"/>
+
+    <android.support.constraint.ConstraintLayout
+     android:id="@+id/reviewDateContainerID"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/reviewDateLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Date:"/>
+
+      <TextView
+          android:id="@+id/reviewDateTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="2018/04/04"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+   android:id="@+id/reviewSalaryContainerID"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/reviewSalaryLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Salary:"/>
+
+      <TextView
+          android:id="@+id/reviewSalaryTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="2018/04/04"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+   android:id="@+id/reviewTypeContainerID"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/reviewTypeLabelID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:text="Type:"/>
+
+      <TextView
+          android:id="@+id/reviewTypeTextID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintRight_toRightOf="parent"
+          android:text="Perfomance Increase"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+  </LinearLayout>
+  
+</ScrollView>

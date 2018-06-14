@@ -19,15 +19,15 @@ namespace FrontEnd.Views
     public class DashboardSummaryFragment : Fragment
     {
 
+        public static string TAG = "DashboardSummaryFragment";
         [BindView(Resource.Id.totalEmployeesCountID)] TextView totalEmployeeCountText;
-        [BindView(Resource.Id.totalDeveloperCountID)] TextView totalDevelopersCountText;
-        [BindView(Resource.Id.totalSalesTeamCountID)] TextView totalSalesTeamCountText;
         [BindView(Resource.Id.totalReviewsTeamCountID)] TextView totalEmployeeReviewCountText;
         [BindView(Resource.Id.totalMonthlyBorndaysTeamCountID)] TextView totalMonthlyBornDaysCountText;
 
         [BindView(Resource.Id.totalEmployeesContainerID)] ConstraintLayout totalEmployeeButton;
-        [BindView(Resource.Id.totalDevelopersContainerID)] ConstraintLayout totalDevelopersButton;
-        [BindView(Resource.Id.totalSalesContainerID)] ConstraintLayout totalSalesTeamButton;
+        [BindView(Resource.Id.totalRaceContainerID)] ConstraintLayout totalRaceButton;
+        [BindView(Resource.Id.totalGenderContainerID)] ConstraintLayout totalGendersButton;
+
         [BindView(Resource.Id.totalReviewsContainerID)] ConstraintLayout totalEmployeeReviewButton;
         [BindView(Resource.Id.totalBorndaysContainerID)] ConstraintLayout totalMonthlyBornDaysButton;
 
@@ -35,7 +35,8 @@ namespace FrontEnd.Views
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            DashBoardView.CurrentFragmentTag = TAG;
+            DashBoardView.exitCounter = 0;
             // Create your fragment here
         }
 
@@ -53,8 +54,8 @@ namespace FrontEnd.Views
         private void SetActions()
         {
             totalEmployeeButton.Click += OnTotalEmployeeClick;
-            totalDevelopersButton.Click += OnTotalDevelopersClick;
-            totalSalesTeamButton.Click += OnTotalSalesTeamClick;
+            totalRaceButton.Click += OnRaceFilterClick;
+            totalGendersButton.Click += OnGenderFilterClick;
             totalEmployeeReviewButton.Click += OnEmployeeReviewsClick;
             totalMonthlyBornDaysButton.Click += OnTotalMonthlyBirthdaysClick;
         }
@@ -64,15 +65,26 @@ namespace FrontEnd.Views
             ShowEmployeeCollectionView(FilterLookup.AllEmployees);
         }
 
-        protected void OnTotalDevelopersClick(object sender, EventArgs e)
+
+
+        protected void OnRaceFilterClick(object sender, EventArgs e)
         {
-           // ShowEmployeeCollectionView(FilterLookup.Developers);
+            // ShowEmployeeCollectionView(FilterLookup.Developers);
+            FragmentTransaction transcation = FragmentManager.BeginTransaction();
+            RaceFilterDialogFragment dialog = new RaceFilterDialogFragment();
+            dialog.Show(transcation, "show dialog");
         }
 
-        protected void OnTotalSalesTeamClick(object sender, EventArgs e)
+        protected void OnGenderFilterClick(object sender, EventArgs e)
         {
-           // ShowEmployeeCollectionView(FilterLookup.SalesTeam);
+            // ShowEmployeeCollectionView(FilterLookup.Developers);
+            FragmentTransaction transcation = FragmentManager.BeginTransaction();
+            GenderFilterDialogFragment dialog = new GenderFilterDialogFragment();
+            dialog.Show(transcation, "show dialog");
         }
+
+
+
 
         protected void OnTotalMonthlyBirthdaysClick(object sender, EventArgs e)
         {

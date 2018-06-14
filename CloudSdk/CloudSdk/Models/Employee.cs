@@ -1,23 +1,20 @@
 ﻿using System;
 using Newtonsoft.Json;
 using CloudSdk.ApiInterface;
+using CloudSdk.Models;
 
 namespace CloudSdk.Model
 {
-    public class Employee : User
+    public class Employee
     {
 
-        [JsonProperty(PropertyName = "id")]
-        public int id;
+        public Employee()
+        {
+        }
 
-        [JsonProperty(PropertyName = "name")]
-        private string _positionName;
+        public User user = new User();
 
-        [JsonProperty(PropertyName = "level")]
-        public string level;
-
-        [JsonProperty(PropertyName = "sort")]
-        private int _sort;
+        public Position position = new Position();
 
         [JsonProperty(PropertyName = "email")]
         private string _emailAddress;
@@ -25,20 +22,57 @@ namespace CloudSdk.Model
         [JsonProperty(PropertyName = "phone")]
         private string _phoneNumber;
 
-        [JsonProperty(PropertyName = "gituser")]
-        private string _gitusername;
+        [JsonProperty(PropertyName = "github_user")]
+        private string github_user;
 
         [JsonProperty(PropertyName = "birthdate")]
         private string _bornday;
 
-        public Employee()
+        private int years_worked;
+
+        private int age;
+
+        private int days_to_birthday;
+
+        public string gender;
+
+        public string race;
+
+        public string Race
         {
+            get => race;
+            set => race = value;
+        }
+
+        public string Gender
+        {
+            get => gender;
+            set => gender = value;
+        }
+
+        public int Age
+        {
+            get => age;
+            set => age = value;
+        }
+
+        public int DaysToBirthDay
+        {
+            get => days_to_birthday;
+            set => days_to_birthday = value;
+        }
+
+
+        public int YearsWorked
+        {
+            get => years_worked;
+            set => years_worked = value;
         }
 
         public string GitUsername
         {
-            get => _gitusername;
-            set => _gitusername = value;
+            get => github_user;
+            set => github_user = value;
         }
 
         public string BornDate
@@ -59,30 +93,6 @@ namespace CloudSdk.Model
             set => _phoneNumber = value;
         }
 
-        public int EmployeeID
-        {
-            get => id;
-            set => id = value;
-        }
-
-        public string PositionName
-        {
-            get => _positionName;
-            set => _positionName = value;
-        }
-
-        public string EmployeeLevel
-        {
-            get => level;
-            set => level = value;
-        }
-
-        public int Sort
-        {
-            get => _sort;
-            set => _sort = value;
-        }
-
         public static Employee FetchEmployeeData()
         {
             ApiAdapter apiAdapter = new ApiAdapter();
@@ -91,15 +101,15 @@ namespace CloudSdk.Model
             return employee;
         }
 
-        public static bool AuthenticateUser(string email, string password)
+        public static string AuthenticateUser(string email, string password)
         {
             ApiAdapter apiAdapter = new ApiAdapter();
             string token = apiAdapter.AuthenticateUser(email, password);
 
             if (token.Equals(ApiSettings.AUTH_TOKEN))
-                return true;
+                return token;
             else
-                return false;        
+                return null;        
         }
 
     }

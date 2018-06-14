@@ -12,7 +12,7 @@ namespace CloudSdk.Models
     public class EmployeeCollection
     {
         [JsonProperty(PropertyName = "employees")]
-        public Dictionary<Int16, Employee> employeeList = new Dictionary<Int16, Employee>();
+        public Dictionary<int, Employee> employeeList = new Dictionary<int, Employee>();
 
         public EmployeeCollection() { }
 
@@ -22,11 +22,16 @@ namespace CloudSdk.Models
         public static EmployeeCollection FetchEmployeeListFromApi()
         {
             ApiAdapter apiAdapter = new ApiAdapter();
-            EmployeeCollection employeeCollection = apiAdapter.FetchEmployees();
+            EmployeeCollection employeeCollection = apiAdapter.FetchEmployees(null);
             return employeeCollection;
         }
 
-        
+        public static EmployeeCollection FetchEmployeeListFromApi(string filterString)
+        {
+            ApiAdapter apiAdapter = new ApiAdapter();
+            EmployeeCollection employeeCollection = apiAdapter.FetchEmployees(filterString);
+            return employeeCollection;
+        }
 
 
     }

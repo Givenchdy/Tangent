@@ -28,9 +28,77 @@ namespace CloudSdk.Model
         [JsonProperty(PropertyName = "birthdate")]
         private string _bornday;
 
-        private int years_worked;
+        public string IdNumber
+        {
+            get => id_number;
+            set => id_number = value;
+        }
 
-        private int age;
+        private string id_number;
+
+        private string physical_address;
+        public string PhysicalAddress
+        {
+            get => physical_address;
+            set => physical_address = value;
+        }
+
+        private string personal_email;
+        public string PersonalEmail
+        {
+            get => personal_email;
+            set => personal_email = value;
+        }
+
+        private string birth_date;
+        public string BirthDate
+        {
+            get => birth_date;
+            set => birth_date = value;
+        }
+
+        private string start_date;
+        public string StartDate
+        {
+            get => start_date;
+            set => start_date = value;
+        }
+
+        private bool is_employed;
+        public bool IsEmployed
+        {
+            get => is_employed;
+            set => is_employed = value;
+        }
+
+        private bool is_foreigner;
+        public bool IsForeigner
+        {
+            get => is_foreigner;
+            set => is_foreigner = value;
+        }
+
+        private int years_worked;
+        public int YearsWorked
+        {
+            get => years_worked;
+            set => years_worked = value;
+        }
+
+        private string next_review;
+        public string NextReview
+        {
+            get => next_review;
+            set => next_review = value;
+        }
+
+        private int leave_remaining;
+        public int LeaveRemaining
+        {
+            get => leave_remaining;
+            set => leave_remaining = value;
+        }
+
 
         private int days_to_birthday;
 
@@ -50,6 +118,8 @@ namespace CloudSdk.Model
             set => gender = value;
         }
 
+        private int age;
+
         public int Age
         {
             get => age;
@@ -60,13 +130,6 @@ namespace CloudSdk.Model
         {
             get => days_to_birthday;
             set => days_to_birthday = value;
-        }
-
-
-        public int YearsWorked
-        {
-            get => years_worked;
-            set => years_worked = value;
         }
 
         public string GitUsername

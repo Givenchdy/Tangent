@@ -27,6 +27,43 @@ namespace PCL.ViewModel
 
         public string EmployeeLevel { get; set; }
 
+        public string Race { get; set; }
+
+        public string GetGender
+        {
+            get
+            {
+                switch (Race)
+                {
+                    case "M":
+                        return "Male";
+                    default:
+                        return "Female";
+
+                }
+            }
+        }
+
+        public string GetRace
+        {
+            get
+            {
+                switch(Race)
+                {
+                    case "I":
+                        return "Indian";
+                    case "B":
+                        return "Black";
+                    case "W":
+                        return "White";
+                    case "C":
+                        return "Coloured";
+                    default:
+                        return "Non Dominant";
+                }
+            }
+        }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

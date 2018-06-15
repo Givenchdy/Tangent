@@ -51,6 +51,8 @@ namespace FrontEnd.Views
         {
             base.OnCreate(savedInstanceState);
 
+            selectedEmployee = DashBoardView.dashBoardPresenter.FetchMyProfile();
+
             // Create your fragment here
         }
 
@@ -69,33 +71,32 @@ namespace FrontEnd.Views
 
             if (selectedEmployee != null)
             {
+           //     try
+           //     {
+                    firstNameText.Text = selectedEmployee.FirstName;
+                    lastNameText.Text = selectedEmployee.LastName;
+                    positionNameText.Text = selectedEmployee.PositionName;
+                    LevelNameText.Text = selectedEmployee.EmployeeLevel;
+                    bornDayText.Text = selectedEmployee.BirthDate;
+                    genderText.Text = selectedEmployee.GetGender;
+                    raceText.Text = selectedEmployee.GetRace;
 
-                firstNameText.Text = selectedEmployee.FirstName;
-                lastNameText.Text = selectedEmployee.LastName;
-                positionNameText.Text = selectedEmployee.PositionName;
-                LevelNameText.Text = selectedEmployee.EmployeeLevel;
-                bornDayText.Text = selectedEmployee.BirthDate;
-                genderText.Text = selectedEmployee.GetGender;
-                raceText.Text = selectedEmployee.GetRace;
+                    //Contact details
+                    phoneText.Text = selectedEmployee.PhoneNumber;
+                    emailText.Text = selectedEmployee.EmailAddress;
+                    gitusernameText.Text = selectedEmployee.GitUsername;
 
-                //Contact details
-                phoneText.Text = selectedEmployee.PhoneNumber;
-                emailText.Text = selectedEmployee.EmailAddress;
-                gitusernameText.Text = selectedEmployee.GitUsername;
+                    nextOfKinName.Text = selectedEmployee.nextOfKin.Name;
+                    nextOfKinRelationship.Text = selectedEmployee.nextOfKin.Relationship;
+                    nextOfKinEmail.Text = selectedEmployee.nextOfKin.Email;
+                    nextOfKinPhone.Text = selectedEmployee.nextOfKin.PhoneNumber;
+                    nextOfKinAddress.Text = selectedEmployee.nextOfKin.PhysicalAddress;
 
-                nextOfKinName.Text = selectedEmployee.nextOfKin.Name;
-                nextOfKinRelationship.Text = selectedEmployee.nextOfKin.Relationship;
-                nextOfKinEmail.Text = selectedEmployee.nextOfKin.Email;
-                nextOfKinPhone.Text = selectedEmployee.nextOfKin.PhoneNumber;
-                nextOfKinAddress.Text = selectedEmployee.nextOfKin.PhysicalAddress;
-
-                //                [BindView(Resource.Id.nextOfKinNameTextID)] TextView nextOfKinName;
-                //[BindView(Resource.Id.nextOfKinRelationTextID)] TextView nextOfKinRelationship;
-                //[BindView(Resource.Id.nextOfKinEmailTextID)] TextView nextOfKinEmail;
-                //[BindView(Resource.Id.nextOfKinPhoneTextID)] TextView nextOfKinPhone;
-                //[BindView(Resource.Id.nextOfKinAddressTextID)] TextView nextOfKinAddress;
-
-
+             //   }
+              //  catch(Exception ex)
+              //  {
+              //      Log.Error(Tag, ex.Message);
+              //  }
             }
         }
     }

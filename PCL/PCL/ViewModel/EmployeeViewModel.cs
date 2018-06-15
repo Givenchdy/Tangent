@@ -1,4 +1,5 @@
-﻿using PCL.Lookups;
+﻿using CloudSdk.Model;
+using PCL.Lookups;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,8 @@ namespace PCL.ViewModel
         public string Race { get; set; }
 
         public NextOfKinViewModel nextOfKin { get; set; }
+
+        public ReviewViewModel Review { get; set; }
 
         public string GetGender
         {
@@ -64,6 +67,47 @@ namespace PCL.ViewModel
                         return "Non Dominant";
                 }
             }
+        }
+
+        public static EmployeeViewModel FetchMyProfile()
+        {
+
+            Employee employee = Employee.FetchEmployeeData();
+
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel();
+
+            //  try
+            // {
+                employeeViewModel.nextOfKin = new NextOfKinViewModel();
+                employeeViewModel.Review = new ReviewViewModel();
+
+                employeeViewModel.EmployeeID = employee.user.id;
+                employeeViewModel.EmployeeLevel = employee.position.level;
+                employeeViewModel.FirstName = employee.user.FirstName;
+                employeeViewModel.LastName = employee.user.LastName;
+                employeeViewModel.PositionName = employee.position.name;
+                employeeViewModel.EmailAddress = employee.EmailAddress;
+                employeeViewModel.PhoneNumber = employee.PhoneNumber;
+                employeeViewModel.GitUsername = employee.GitUsername;
+                employeeViewModel.BirthDate = employee.BornDate;
+                employeeViewModel.GenderName = employee.Gender;
+                employeeViewModel.Race = employee.Race;
+                employeeViewModel.nextOfKin.Name = employee.NextOfKin.Name;
+                employeeViewModel.nextOfKin.PhoneNumber = employee.NextOfKin.PhoneNumber;
+                employeeViewModel.nextOfKin.Email = employee.NextOfKin.Email;
+                employeeViewModel.nextOfKin.PhysicalAddress = employee.NextOfKin.PhysicalAddress;
+                employeeViewModel.nextOfKin.Relationship = employee.NextOfKin.Relationship;
+                employeeViewModel.Review.Date = employee.EmployeeReview.date;
+                employeeViewModel.Review.Salary = employee.EmployeeReview.salary;
+                employeeViewModel.Review.Type = employee.EmployeeReview.type;
+                employeeViewModel.Review.ID = employee.EmployeeReview.id;
+          //  }
+            //catch(Exception ex)
+           // {
+            //    
+           // }
+
+            return employeeViewModel;
         }
 
         public string FirstName { get; set; }

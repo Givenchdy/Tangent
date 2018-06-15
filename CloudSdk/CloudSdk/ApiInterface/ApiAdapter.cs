@@ -74,9 +74,15 @@ namespace CloudSdk.ApiInterface
             StreamReader sr = new StreamReader(myStream);
             var content = sr.ReadToEnd();
 
+            System.Console.Out.WriteLine(content);
+
             //Process response
             Employee employee = new Employee();
+            NextOfKinList kinList = new NextOfKinList();
+
             JsonConvert.PopulateObject(content, employee);
+            System.Console.Out.WriteLine("johhh: " + employee.employee_review.Count);
+
             myStream.Close();
 
             return employee;

@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using CloudSdk.ApiInterface;
 using CloudSdk.Models;
+using System.Collections.Generic;
 
 namespace CloudSdk.Model
 {
@@ -155,6 +156,20 @@ namespace CloudSdk.Model
             get => _phoneNumber;
             set => _phoneNumber = value;
         }
+
+        public LinkedList<NextOfKin> employee_next_of_kin = new LinkedList<NextOfKin>();
+        public NextOfKin NextOfKin
+        {
+            get => employee_next_of_kin.Last.Value;
+        }
+
+        public LinkedList<Review> employee_review = new LinkedList<Review>();
+        public Review EmployeeReview
+        {
+            get => employee_review.Last.Value;
+        }
+
+
 
         public static Employee FetchEmployeeData()
         {
